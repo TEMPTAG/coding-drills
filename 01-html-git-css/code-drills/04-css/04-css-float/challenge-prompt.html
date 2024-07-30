@@ -1,68 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=10">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=10" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Floats</title>
-</head>
-<style>
-
+  </head>
+  <style>
     #red-textbox {
-        padding: 20px;
-        width: 300px;
-        margin: 20px;
+      padding: 20px;
+      width: 300px;
+      margin: 20px;
 
-        background-color: black;
-        /* Float this element to the left */
-
+      background-color: red;
+      /* Float this element to the left */
+      float: left;
     }
 
     #yellow-textbox {
-        padding: 20px;
-        width: 300px;
-        margin: 20px;
+      padding: 20px;
+      width: 300px;
+      margin: 20px;
 
-        background-color: purple;
+      background-color: yellow;
 
-        /* Float this element to the right */
-
+      /* Float this element to the right */
+      float: right;
     }
 
     .blue-textbox {
-        padding: 20px;
-        width: 300px;
-        margin: 20px;
+      padding: 20px;
+      width: 300px;
+      margin: 20px;
 
-        background-color: green;
-        
-        /* Clear the float for this element so it appears below the red and yellow boxes */
+      background-color: blue;
 
+      /* Clear the float for this element so it appears below the red and yellow boxes */
+      clear: both;
     }
+  </style>
 
-    
-</style>
-
-<body>
-
+  <body>
     <!-- Add classes and IDs to the divs -->
-    <div>
-        <p>I'm a red text box</p>
+    <div id="red-textbox">
+      <p>I'm a red text box</p>
     </div>
 
-    <div>
-        <p>I'm a yellow text box</p>
+    <div id="yellow-textbox">
+      <p>I'm a yellow text box</p>
     </div>
 
-    <div>
-        <p>I'm a blue text box</p>
+    <div class="blue-textbox">
+      <p>I'm a blue text box</p>
     </div>
 
-    <div>
-        <p>I'm a blue text box</p>
+    <div class="blue-textbox">
+      <p>I'm a blue text box</p>
     </div>
-
-</body>
-
+  </body>
 </html>
