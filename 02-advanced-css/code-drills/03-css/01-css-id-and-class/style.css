@@ -1,7 +1,7 @@
 *,
 *::after,
 *::before {
-/* This ensures that there is no whitespace surrounding our content. Comment this out or delete it, and you may see some unwelcome whitespace 😖. The * means everything. the ::after and ::before are pseudo elements, we'll cover these later in class */
+  /* This ensures that there is no whitespace surrounding our content. Comment this out or delete it, and you may see some unwelcome whitespace 😖. The * means everything. the ::after and ::before are pseudo elements, we'll cover these later in class */
   margin: 0;
   padding: 0;
 
@@ -15,4 +15,32 @@
   /* rgb stands for red, green, blue using a combination of these three colors, you can make ANY color. Play around with th numbers a little bit! */
   background-color: rgb(233, 56, 25);
   position: relative;
+}
+
+.hello {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  position: absolute;
+}
+
+.world {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  position: absolute;
+}
+
+.howz {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  position: absolute;
+}
+
+.it {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  position: absolute;
 }

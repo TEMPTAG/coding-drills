@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Flexbox Wireframe</title>
 
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <title>Flexbox Wireframe</title>
-
-   <style>
-   /* 
+    <style>
+      /* 
       DIRECTIONS
       ----------
       If you open this HTML in your browser, you'll see a series of boxes stacked on top of each other. Your task is to apply a combination of many of the Flexbox properties you've learned to make this HTML match the layout in 10-example-image.png.
@@ -38,60 +37,95 @@
          - flex                           - <number value>
    */
 
-
       /* APPLY YOUR CSS HERE */
       /* ======================================== */
+      nav {
+        display: flex;
+        justify-content: space-between;
+      }
 
+      main {
+        display: flex;
+        flex-wrap: wrap;
+      }
 
+      section {
+        display: flex;
+        flex-direction: column;
+        flex: 2;
+      }
+
+      article {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+      }
+
+      article div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+      }
+
+      aside {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+      }
+
+      aside div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+      }
+
+      #aside-1 {
+        flex: 1;
+      }
+
+      #aside-2 {
+        flex: 3;
+      }
+
+      #aside-3 {
+        flex: 1;
+      }
 
       /* ======================================== */
-      
-   </style>
+    </style>
 
-   <!-- LINK TO STARTER CSS - DO NOT ALTER THE CONTENTS OF STARTER.CSS -->
-   <link rel="stylesheet" href="starter.css">
+    <!-- LINK TO STARTER CSS - DO NOT ALTER THE CONTENTS OF STARTER.CSS -->
+    <link rel="stylesheet" href="starter.css" />
+  </head>
 
-</head>
-
-<body>
-   <div class="container">
-      <header>
-         Jane Doe
-      </header>
+  <body>
+    <div class="container">
+      <header>Jane Doe</header>
       <nav>
-         <span>Wireframe!</span>
-         <span>About | Portfolio | Contact</span>
+        <span>Wireframe!</span>
+        <span>About | Portfolio | Contact</span>
       </nav>
       <main>
-         <section>
-            section
-            <article>
-               article
-               <div>
-                  h1, h2, h3
-               </div>
-               <div>
-                  p
-               </div>
-            </article>
-         </section>
-         <aside>
-            aside
-            <div id="aside-1">
-               Lorem ipsum dolor sit amet consectetur.
-            </div>
-            <div id="aside-2">
-               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            </div>
-            <div id="aside-3">
-               Lorem ipsum dolor sit amet consectetur.
-            </div>
-         </aside>
+        <section>
+          section
+          <article>
+            article
+            <div>h1, h2, h3</div>
+            <div>p</div>
+          </article>
+        </section>
+        <aside>
+          aside
+          <div id="aside-1">Lorem ipsum dolor sit amet consectetur.</div>
+          <div id="aside-2">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          </div>
+          <div id="aside-3">Lorem ipsum dolor sit amet consectetur.</div>
+        </aside>
       </main>
-      <footer>
-         footer
-      </footer>
-   </div>
-</body>
-
+      <footer>footer</footer>
+    </div>
+  </body>
 </html>

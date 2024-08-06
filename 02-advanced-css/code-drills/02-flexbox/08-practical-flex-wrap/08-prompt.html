@@ -6,16 +6,14 @@
 
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Flex Wrap: Image Gallery</title>
 
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <title>Flex Wrap: Image Gallery</title>
-
-   <style>
-
-   /* 
+    <style>
+      /* 
       INTRODUCTION
       ------------
       For this activity, you will use Flexbox to create a responsive image gallery. This should help you to see a more practical application of the "flex-wrap: wrap" CSS property.
@@ -32,17 +30,17 @@
    */
 
       img {
-         height: 200px; /* images are 200px tall */
-         width: 200px; /* images are 200px wide */
-         margin: 20px; /* images have 20px of margin on all sides (for spacing) */
-         transition: box-shadow 300ms; /* shadow takes 300 milliseconds to appear/fade away */
+        height: 200px; /* images are 200px tall */
+        width: 200px; /* images are 200px wide */
+        margin: 20px; /* images have 20px of margin on all sides (for spacing) */
+        transition: box-shadow 300ms; /* shadow takes 300 milliseconds to appear/fade away */
       }
 
       img:hover {
-         box-shadow: 0 0 15px rgb(111, 111, 111); /* images have 15px of shadow on hover */
+        box-shadow: 0 0 15px rgb(111, 111, 111); /* images have 15px of shadow on hover */
       }
 
-   /*
+      /*
       STEP 2:
       -------
       If you look at the HTML below, you'll see that the <img> elements are wrapped in TWO <div> elements, one with id of #container and another inner-div with id of #image-grid. We will use the #image-grid <div> to control the positioning/wrapping of the images, and then we'll use the #container <div> to control the positioning of the #image-grid as a whole.
@@ -51,14 +49,13 @@
    */
 
       #image-grid {
-         /* max-width: <set the maximum width to be 1100px> */
-         /* display: <set this to be be display: flex> */
-         /* justify-content: <apply a justify-content value to center the child elements horizontally> */
-         /* flex-wrap: <apply flexbox wrapping> */
+        max-width: 1100px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
       }
 
-
-   /*
+      /*
       STEP 3:
       -------
       At this point, you should have an #image-grid with a mamximum width of 1100px. When you reduce the width of your screen, the images in the grid should 'wrap' onto new rows. BUT they are not centered. This is because the <img> elements are centered inside of the #image-grid <div>, but #image-grid is not centered inside of the #container <div>.
@@ -67,39 +64,72 @@
    */
 
       #container {
+        display: flex;
+        justify-content: center;
       }
 
-   /*
+      /*
       That's it! Your image grid should be centered and maximum 1100px wide. When the screen size is reduced, the images should 'wrap' onto a new row, but they should remain centered and evenly spaced. If needed, compare your HTML/CSS to the solution.
    */
 
       body {
-         margin: 0;
+        margin: 0;
       }
-      
-   </style>
+    </style>
+  </head>
 
-</head>
-
-<body>
-
-   <div id="container">
+  <body>
+    <div id="container">
       <div id="image-grid">
-         <img src="https://via.placeholder.com/200/355c7d/ffffff" alt="placeholder-image">
-         <img src="https://via.placeholder.com/200/6c5b7b/ffffff" alt="placeholder-image">
-         <img src="https://via.placeholder.com/200/c06c84/ffffff" alt="placeholder-image">
-         <img src="https://via.placeholder.com/200/f67280/ffffff" alt="placeholder-image">
-         <img src="https://via.placeholder.com/200/355c7d/ffffff" alt="placeholder-image">
-         <img src="https://via.placeholder.com/200/6c5b7b/ffffff" alt="placeholder-image">
-         <img src="https://via.placeholder.com/200/c06c84/ffffff" alt="placeholder-image">
-         <img src="https://via.placeholder.com/200/f67280/ffffff" alt="placeholder-image">
-         <img src="https://via.placeholder.com/200/355c7d/ffffff" alt="placeholder-image">
-         <img src="https://via.placeholder.com/200/6c5b7b/ffffff" alt="placeholder-image">
-         <img src="https://via.placeholder.com/200/c06c84/ffffff" alt="placeholder-image">
-         <img src="https://via.placeholder.com/200/f67280/ffffff" alt="placeholder-image">
+        <img
+          src="https://via.placeholder.com/200/355c7d/ffffff"
+          alt="placeholder-image"
+        />
+        <img
+          src="https://via.placeholder.com/200/6c5b7b/ffffff"
+          alt="placeholder-image"
+        />
+        <img
+          src="https://via.placeholder.com/200/c06c84/ffffff"
+          alt="placeholder-image"
+        />
+        <img
+          src="https://via.placeholder.com/200/f67280/ffffff"
+          alt="placeholder-image"
+        />
+        <img
+          src="https://via.placeholder.com/200/355c7d/ffffff"
+          alt="placeholder-image"
+        />
+        <img
+          src="https://via.placeholder.com/200/6c5b7b/ffffff"
+          alt="placeholder-image"
+        />
+        <img
+          src="https://via.placeholder.com/200/c06c84/ffffff"
+          alt="placeholder-image"
+        />
+        <img
+          src="https://via.placeholder.com/200/f67280/ffffff"
+          alt="placeholder-image"
+        />
+        <img
+          src="https://via.placeholder.com/200/355c7d/ffffff"
+          alt="placeholder-image"
+        />
+        <img
+          src="https://via.placeholder.com/200/6c5b7b/ffffff"
+          alt="placeholder-image"
+        />
+        <img
+          src="https://via.placeholder.com/200/c06c84/ffffff"
+          alt="placeholder-image"
+        />
+        <img
+          src="https://via.placeholder.com/200/f67280/ffffff"
+          alt="placeholder-image"
+        />
       </div>
-   </div>
-
-</body>
-
+    </div>
+  </body>
 </html>

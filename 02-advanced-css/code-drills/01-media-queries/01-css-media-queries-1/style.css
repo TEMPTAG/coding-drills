@@ -1,25 +1,21 @@
-
 html {
   /* rem is relative to the fontsize of an element. The default fontsize on most browsers is 16px; */
-  
-    font-size: 62.5%;  /* 1rem = 10px */
+
+  font-size: 62.5%; /* 1rem = 10px */
 
   /* this makes it a lot easier to calcute rem. 62.5% is 10/16 so our defualt fontsize is relative to user settings. defines what 1 rem is. So now, instead of 10px, we can write 1rem, Instead of 200px, we can write 20rem, etc..
   
   You don't have to use this trick, but it can make life a lot easier on us. On our media queries, we can just change the fontsize in our html styling, and everything using rem will change accordingly. Keep in mind that if you use this trick, you will need to specify the fontsize of all the text on your app.
   */
-
-
 }
 
-
 body {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .heading-primary {
   text-align: center;
-  text-shadow: 0 2rem 3rem rgba(0,0,0,.5);
+  text-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.5);
   font-size: 3rem;
 }
 
@@ -54,20 +50,19 @@ body {
   font-family: inherit;
   font-size: 1.5rem;
   border-radius: 2rem;
-  transition: .2s;
-  
+  transition: 0.2s;
 }
 
 .btn:hover {
   transform: translateY(-1px);
-  box-shadow: 0 .5rem .7rem rgba(0,0,0,.2);
+  box-shadow: 0 0.5rem 0.7rem rgba(0, 0, 0, 0.2);
 }
 
 .btn:active,
 .btn:focus {
   transform: translateY(1px);
   outline: none;
-  box-shadow: 0 .2rem .4rem rgba(0,0,0,.2);
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
 }
 
 /* 
@@ -81,24 +76,65 @@ If both apply, then there must be some kind of tie-breaker to determine which st
 Therefore, we want our media queries in descending order, so that the most recent condtion that was hit, is the one that gets styled. 
 */
 
-
 /* =============== YOUR WORK HERE =============== */
 @media (max-width: 1200px) {
-/* This makes it so that every element using rem will shrink a little bit as our screen size does.  */
+  /* This makes it so that every element using rem will shrink a little bit as our screen size does.  */
   html {
     font-size: 55%;
   }
 
-  
+  .heading-primary {
+    color: blue;
+  }
+
+  .about__box--center {
+    width: 60%;
+    border: solid 5px purple;
+    color: white;
+    background-color: red;
+  }
 }
 
-
 @media (max-width: 900px) {
-/* Set the font-size to 45% */
+  /* Set the font-size to 45% */
+  html {
+    font-size: 45%;
+  }
 
+  .heading-primary {
+    text-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.5);
+    color: purple;
+  }
+
+  .heading-sub {
+    display: block;
+  }
+
+  .about__box--center {
+    width: 90%;
+    border: solid 10px green;
+    background-color: yellow;
+    color: black;
+  }
+
+  .btn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 8rem;
+    padding: 5px;
+    background-color: red;
+  }
 }
 
 @media (max-width: 600px) {
   /* For the colorful background, look up setting a background-image to a linear gradient in css */
+  body {
+    font-family: fantasy;
+    background-image: linear-gradient(to right bottom, red, blue);
+  }
 
+  .heading-primary {
+    color: white;
+  }
 }
